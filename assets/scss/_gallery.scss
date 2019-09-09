@@ -1,0 +1,121 @@
+.gallery {
+    text-align: center;
+    background-color: #fafafa; 
+    padding-top: 71px;
+    .wrap-card{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__card {
+        position: relative;
+        height: 290px;
+        width: 100%;
+        max-width: 290px;
+        margin: 15px auto 15px auto;
+        background: url('../images/img1.png');
+        background-size: cover; 
+        &:hover > div{
+            transform: translateY(0);
+            opacity: 1;
+            position: absolute;
+            background: rgba(0,0,0,0.6);
+            top:0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        &_card2 {
+            background: url('../images/img2.png');
+            @extend %card-gallery;
+        }
+        &_card3 {
+            background: url('../images/img3.png');
+            @extend %card-gallery;
+        }
+        &_card4 {
+            background: url('../images/img4.png');
+            @extend %card-gallery;
+        }
+        &_card5 {
+            background: url('../images/img5.png');
+            @extend %card-gallery;
+        }
+        &_card6 {
+            background: url('../images/img6.png');
+            @extend %card-gallery;
+        }
+        &_card7 {
+            background: url('../images/img7.png');
+            @extend %card-gallery;
+        }
+        &_card8 {
+            background: url('../images/img8.png');
+            @extend %card-gallery;
+        }
+        &_card9 {
+            background: url('../images/img9.png');
+            @extend %card-gallery;
+        }
+        
+        
+    }
+    
+
+    // CONTETN CARD
+    .statistics-wrapper {
+        padding-left: 20px;
+        padding-right: 48px;
+        padding-top: 170px;
+        transform: translateY(-20%);
+        transition: 0.3s;
+        opacity: 0;
+        font-family: 'ProximaNova-Regular';
+        color: #ffff;
+        &__today,
+        &__date {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__today {
+            padding-bottom: 15px;
+        }
+        .likes-messages-today,
+        .likes-messages-date {
+            display: flex;
+            align-items: center;
+            width: 113px;
+            span {
+                padding-left: 23px;
+            }
+            i {
+                padding-right: 5px;
+            }
+        }
+        &__text {
+            padding-top: 33px;
+            font-family: 'ProximaNova-Regular';
+        }
+    }
+    // BUTTON LOAD MORE
+    .btn {
+        margin-top: 44px;
+        margin-bottom: 75px;
+        font-family: 'ProximaNova-Regular';
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        border: 1px solid #000;
+        border-radius: 20px;
+        padding: 4px 25px 4px 25px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .gallery {
+        padding-top: 35px;
+    }
+}
+
